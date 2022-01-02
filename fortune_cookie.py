@@ -20,8 +20,8 @@ def main():
     """Create and print a fortune cookie."""
     print("Get your fortune cookie!")
 
-    # Prompt the user for how many lucky numbers they would like
-    qty_lucky_numbers = input("How many lucky numbers would you like?  ")
+    # Prompt the user for how many lucky numbers they would like 
+    qty_lucky_numbers = input("How many lucky numbers would you like? ")
     qty_lucky_numbers = int(qty_lucky_numbers.strip())
 
     # Create and display their Fortune
@@ -51,10 +51,23 @@ def create_fortune_cookie_message(how_many_lucky_numbers: int) -> str:
     # TODO: Create a fortune cookie message by calling generate_fortune() and
     # generate_lucky_numbers() and then composing and returning the fortune
     # cookie's message.
+    
+    fortune = generate_fortune()
+    number = generate_lucky_numbers (how_many=how_many_lucky_numbers)
+    
 
-    raise NotImplementedError()
+    message= number , fortune
 
+    return message 
+    
 
 #Check to see if this file is the  main script being executed
 if __name__ == '__main__':
+    print('Fortune Cookie is being run directly')
+else:
+    print('Fortune Cookie is being imported into another module')
+if __name__ == '__main__':
     main()
+
+
+print("Finished")
